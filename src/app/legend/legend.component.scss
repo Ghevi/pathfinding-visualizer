@@ -1,0 +1,11 @@
+.legend {
+  display: flex;
+  height: 8rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__element {
+    font-size: 1.75rem;
+    margin: 0 5rem;
+  }
+}
