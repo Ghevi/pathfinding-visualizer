@@ -13,8 +13,10 @@ export class GridComponent implements OnInit {
 
   }
 
-  numSequence(n: number): Array<number> {
+  generateNodesGrid(n: number): Array<number> {
     return Array(n);
   }
+
+
 
 }

@@ -1,3 +1,7 @@
 <div>
-  <app-node *ngFor="let n of numSequence(2475); let i = index;"></app-node>
+  <app-node
+    *ngFor="let n of generateNodesGrid(2475); let i = index"
+    [index]="i"
+  >
+  </app-node>
 </div>

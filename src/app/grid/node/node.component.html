@@ -1,1 +1,15 @@
-<p></p>
+<div class="start" *ngIf="index === 1145">
+  <img src="../../../assets/start.svg" alt="target" />
+</div>
+
+<div *ngIf="index === 1175">
+  <img src="../../../assets/target.svg" alt="target" />
+</div>
+
+<div class="empty"
+  *ngIf="index !== 1175 && index !== 1145"
+  (mouseover)="onClick()"
+  [ngClass]="{ wall: isNodeClicked }"
+>
+<img class="empty-node" src="../../../assets/empty-node.svg" alt="target" />
+</div>
