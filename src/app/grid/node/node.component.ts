@@ -14,12 +14,12 @@ export class NodeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  generateNodesGrid(n: number): Array<number> {
-    for(let i = 0; i < n; i++) {
-      this.nodes.push(new Node());
+  generateNodesGrid(nodesNumber: number): Array<number> {
+    for(let i = 0; i < nodesNumber; i++) {
+      this.nodes.push(new Node(i));
     }
 
-    return Array(n);
+    return Array(nodesNumber);
   }
 
   onClick(index: number) {

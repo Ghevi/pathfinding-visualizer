@@ -30,45 +30,53 @@
   list-style: none;
 
   &__button {
-    &.actions__button {
-      &--dropdown {
-      }
+    &--dropdown {
+    }
 
-      &--visualize {
-        padding: 1rem 1rem;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        background-color: var(--color-primary);
-        font-weight: 700;
+    &--visualize {
+      padding: 1rem 1rem;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      background-color: var(--color-primary);
+      font-weight: 700;
 
-        &:focus {
-          outline: none;
-        }
-      }
-
-      &--btn {
+      &:focus {
+        outline: none;
       }
     }
 
-    a {
-      color: #fff;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      transition: color 0.2s;
+    &--btn {
+    }
+  }
 
-      &:hover {
-        color: rgb(0, 195, 255);
-      }
+  &__link:link,
+  &__link:visited {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+    transition: all 0.2s;
 
+    &:hover {
+      color: rgb(0, 195, 255);
+    }
 
+    &:hover > * {
+      transition: all .2s;
+      transform: scale(1.5);
     }
 
     span {
-      font-size: 2.5rem;
-      padding-top: 3px;
+      font-size: 2rem;
       padding-left: 0.5rem;
     }
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: rgba(#fff, 0.05);
+    transform: translateY(-3px);
   }
 }

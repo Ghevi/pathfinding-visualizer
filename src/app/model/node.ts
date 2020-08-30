@@ -3,6 +3,7 @@ import Cell from './cell';
 export default class Node {
   // row;
   // column;
+  index;
   isWall;
   // isStartNode;
   // isTargetNode;
@@ -14,6 +15,7 @@ export default class Node {
   constructor(
     // row,
     // column,
+    index,
     isWall = false,
     visited = false,
     // startNode: Cell = null,
@@ -21,6 +23,7 @@ export default class Node {
   ) {
     // this.row = row;
     // this.column = column;
+    this.index = index,
     this.isWall = isWall;
     // this.isStartNode = this.areInSameCell(startNode, { row, column });
     // this.isTargetNode = this.areInSameCell(targetNode, { row, column });
