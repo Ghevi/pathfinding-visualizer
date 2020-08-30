@@ -15,7 +15,7 @@ import { LegendComponent } from './legend/legend.component';
     HeaderComponent,
     GridComponent,
     NodeComponent,
-    LegendComponent
+    LegendComponent,
   ],
   imports: [
     BrowserModule,

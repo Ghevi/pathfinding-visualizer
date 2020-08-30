@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import Node from '../../model/node';
 
 @Component({
   selector: 'app-node',
@@ -6,16 +7,23 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./node.component.scss']
 })
 export class NodeComponent implements OnInit {
-  @Input() index: number;
-  isNodeClicked = false;
+  nodes: Node[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClick() {
-    this.isNodeClicked = !this.isNodeClicked;
+  generateNodesGrid(n: number): Array<number> {
+    for(let i = 0; i < n; i++) {
+      this.nodes.push(new Node());
+    }
+
+    return Array(n);
+  }
+
+  onClick(index: number) {
+    this.nodes[index].isWall = !this.nodes[index].isWall;
   }
 
 }

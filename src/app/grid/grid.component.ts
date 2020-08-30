@@ -12,11 +12,4 @@ export class GridComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  generateNodesGrid(n: number): Array<number> {
-    return Array(n);
-  }
-
-
-
 }
