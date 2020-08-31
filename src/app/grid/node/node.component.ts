@@ -8,6 +8,7 @@ import Node from '../../model/node';
 })
 export class NodeComponent implements OnInit {
   nodes: Node[] = [];
+  isMousePressed: boolean = false;
 
   constructor() { }
 
@@ -22,8 +23,19 @@ export class NodeComponent implements OnInit {
     return Array(nodesNumber);
   }
 
-  onClick(index: number) {
+  onMouseDown(index: number) {
     this.nodes[index].isWall = !this.nodes[index].isWall;
+    this.isMousePressed = true;
+  }
+
+  onMouseEnter(index: number) {
+    if(this.isMousePressed) {
+      this.nodes[index].isWall = !this.nodes[index].isWall;
+    }
+  }
+
+  onMouseUp(index: number) {
+    this.isMousePressed = false;
   }
 
 }
