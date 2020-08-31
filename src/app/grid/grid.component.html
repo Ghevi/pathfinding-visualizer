@@ -1,3 +1,11 @@
-<div>
-  <app-node></app-node>
+<div class="grid">
+  <app-node
+    class="node"
+    *ngFor="let n of generateNodesGrid(2475); let i = index"
+    [index]="i"
+    (mousedown)="onMouseDown(i, $event)"
+    (mouseenter)="onMouseEnter(i, $event)"
+    (mouseup)="onMouseUp()"
+    [ngClass]="{ wall: nodes[i]?.isWall }"
+  ></app-node>
 </div>

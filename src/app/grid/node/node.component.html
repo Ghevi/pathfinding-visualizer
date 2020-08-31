@@ -1,16 +1,12 @@
-<div class="node" *ngFor="let n of generateNodesGrid(6000); let i = index">
-  <div class="start" *ngIf="i === 1145">
-    <img src="../../../assets/start.svg" alt="target" />
+<div
+>
+  <div class="start" *ngIf="index === 1145">
+    <img class="start__icon" src="../../../assets/start.svg" alt="target" />
   </div>
 
-  <div *ngIf="i === 1175">
-    <img src="../../../assets/target.svg" alt="target" />
+  <div class="target" *ngIf="index === 1175">
+    <img class="target__icon" src="../../../assets/target.svg" alt="target" />
   </div>
 
-  <div
-    class="empty-node"
-    *ngIf="i !== 1175 && i !== 1145"
-    (mousedown)="onClick(i)"
-    [ngClass]="{ wall: nodes[i].isWall }"
-  >{{ i }}</div>
+  <!-- <div class="empty-node" *ngIf="i !== 1175 && i !== 1145"></div> -->
 </div>

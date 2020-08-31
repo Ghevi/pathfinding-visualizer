@@ -1,4 +1,39 @@
-:host {
-  height: 82vh;
+.grid {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-left: 2.2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  height: 84vh;
+  display: grid;
+  grid-template-rows: repeat(33, 2.5rem);
+  grid-template-columns: repeat(75, 2.5rem);
 }
 
+.node {
+  border: var(--line);
+  height: 100%;
+}
+
+.wall {
+  animation-name: visitedAnimation;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    background-color: var(--color-grey-dark-2);
+    transform: scale(1.4);
+  }
+
+  100% {
+    background-color: var(--color-grey-dark-2);
+    transform: scale(1.2);
+  }
+}
